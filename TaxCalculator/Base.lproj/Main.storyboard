@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gold_bg" translatesAutoresizingMaskIntoConstraints="NO" id="YYY-Sq-0PB">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Qs7-dc-Uij">
+                                <rect key="frame" x="244" y="552" width="113" height="29"/>
+                                <segments>
+                                    <segment title="CA"/>
+                                    <segment title="CHI"/>
+                                    <segment title="NY"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IfR-JW-RPJ">
+                                <rect key="frame" x="254" y="470" width="92" height="30"/>
+                                <state key="normal" title="Calculate Tax">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCalculateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jsl-4M-RtP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvR-nB-0Xv" userLabel="Result Label">
+                                <rect key="frame" x="232" y="180" width="136" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Price Here" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ytj-ms-7PF">
+                                <rect key="frame" x="237" y="320" width="127" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YYY-Sq-0PB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1KE-cH-Ahz"/>
+                            <constraint firstAttribute="bottom" secondItem="YYY-Sq-0PB" secondAttribute="bottom" id="DUl-lM-zLb"/>
+                            <constraint firstAttribute="bottom" secondItem="Qs7-dc-Uij" secondAttribute="bottom" constant="20" id="FG6-yV-Mtz"/>
+                            <constraint firstItem="kvR-nB-0Xv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G09-WO-9T9"/>
+                            <constraint firstAttribute="bottom" secondItem="ytj-ms-7PF" secondAttribute="bottom" constant="250" id="NGd-eF-u8z"/>
+                            <constraint firstAttribute="bottom" secondItem="kvR-nB-0Xv" secondAttribute="bottom" constant="360" id="cO6-YX-CcQ"/>
+                            <constraint firstAttribute="trailing" secondItem="YYY-Sq-0PB" secondAttribute="trailing" id="dHg-X6-x2S"/>
+                            <constraint firstItem="IfR-JW-RPJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hEk-H9-hDk"/>
+                            <constraint firstItem="YYY-Sq-0PB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="k6h-HJ-JRh"/>
+                            <constraint firstItem="Qs7-dc-Uij" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lMJ-89-mcq"/>
+                            <constraint firstItem="ytj-ms-7PF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rPZ-TI-D18"/>
+                            <constraint firstAttribute="bottom" secondItem="IfR-JW-RPJ" secondAttribute="bottom" constant="100" id="xVd-d4-7aT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="priceTextField" destination="ytj-ms-7PF" id="vtC-sP-NEG"/>
+                        <outlet property="restultLabel" destination="kvR-nB-0Xv" id="0II-2V-wEX"/>
+                        <outlet property="segmentedControl" destination="Qs7-dc-Uij" id="lqh-xj-j1l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="401"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gold_bg" width="160" height="284"/>
+    </resources>
+</document>
